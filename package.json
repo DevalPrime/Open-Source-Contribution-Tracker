@@ -1,0 +1,27 @@
+{
+  "name": "open-source-contribution-tracker",
+  "version": "1.0.0",
+  "description": "A platform that helps open source enthusiasts track their contributions to various projects. It could include features like integration with GitHub, contribution analytics, and progress tracking.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"No tests specified yet\" && exit 0"
+  },
+  "keywords": [
+    "github",
+    "open-source",
+    "contributions",
+    "tracking",
+    "analytics"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
