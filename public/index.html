@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Contribution Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Open Source Contribution Tracker</h1>
+            <p class="subtitle">Track your contributions to open source projects</p>
+        </header>
+
+        <!-- GitHub Integration Section -->
+        <section class="card">
+            <h2>GitHub Integration</h2>
+            <div class="search-box">
+                <input type="text" id="username" placeholder="Enter GitHub username" />
+                <button id="fetchBtn" onclick="fetchUserData()">Fetch Contributions</button>
+            </div>
+            <div id="loadingIndicator" class="loading" style="display: none;">Loading...</div>
+        </section>
+
+        <!-- User Profile Section -->
+        <section id="userProfile" class="card" style="display: none;">
+            <h2>User Profile</h2>
+            <div id="profileContent"></div>
+        </section>
+
+        <!-- Contribution Analytics Section -->
+        <section id="contributionAnalytics" class="card" style="display: none;">
+            <h2>Contribution Analytics</h2>
+            <div id="analyticsContent"></div>
+        </section>
+
+        <!-- Recent Activity Section -->
+        <section id="recentActivity" class="card" style="display: none;">
+            <h2>Recent Activity</h2>
+            <div id="activityContent"></div>
+        </section>
+
+        <!-- Progress Tracking Section -->
+        <section class="card">
+            <h2>Track Your Contributions</h2>
+            <div class="form-group">
+                <h3>Add New Contribution</h3>
+                <form id="contributionForm">
+                    <input type="text" id="trackUsername" placeholder="GitHub Username" required />
+                    <input type="text" id="repository" placeholder="Repository (e.g., owner/repo)" required />
+                    <select id="type" required>
+                        <option value="">Select Type</option>
+                        <option value="pull_request">Pull Request</option>
+                        <option value="issue">Issue</option>
+                        <option value="commit">Commit</option>
+                        <option value="review">Code Review</option>
+                        <option value="documentation">Documentation</option>
+                    </select>
+                    <input type="text" id="title" placeholder="Title (optional)" />
+                    <input type="url" id="url" placeholder="URL (optional)" />
+                    <select id="status">
+                        <option value="in_progress">In Progress</option>
+                        <option value="open">Open</option>
+                        <option value="merged">Merged</option>
+                        <option value="closed">Closed</option>
+                    </select>
+                    <textarea id="notes" placeholder="Notes (optional)"></textarea>
+                    <button type="submit">Add Contribution</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Tracked Contributions Section -->
+        <section class="card">
+            <h2>Your Tracked Contributions</h2>
+            <div id="trackedContributions">
+                <p class="no-data">No contributions tracked yet. Add one above!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
